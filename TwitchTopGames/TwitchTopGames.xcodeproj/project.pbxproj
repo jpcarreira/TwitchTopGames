@@ -14,6 +14,7 @@
 		62B08E011E86E2D6002ACA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DFE1E86E2D6002ACA0A /* Main.storyboard */; };
 		62B08E081E86E3FC002ACA0A /* JCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */; };
 		62B08E091E86E3FC002ACA0A /* JCNetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E071E86E3FC002ACA0A /* JCNetworkWrapper.swift */; };
+		62B08E121E872776002ACA0A /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B08E111E872776002ACA0A /* Gloss.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		62B08DFF1E86E2D6002ACA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkError.swift; path = Utils/NetworkHelper/JCNetworkError.swift; sourceTree = "<group>"; };
 		62B08E071E86E3FC002ACA0A /* JCNetworkWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkWrapper.swift; path = Utils/NetworkHelper/JCNetworkWrapper.swift; sourceTree = "<group>"; };
+		62B08E111E872776002ACA0A /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B08E121E872776002ACA0A /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				62B08DE41E86DE89002ACA0A /* TwitchTopGames */,
 				62B08DE31E86DE89002ACA0A /* Products */,
+				62B08E101E872776002ACA0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +114,14 @@
 			name = NetworkHelper;
 			sourceTree = "<group>";
 		};
+		62B08E101E872776002ACA0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62B08E111E872776002ACA0A /* Gloss.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +132,7 @@
 				62B08DDE1E86DE89002ACA0A /* Sources */,
 				62B08DDF1E86DE89002ACA0A /* Frameworks */,
 				62B08DE01E86DE89002ACA0A /* Resources */,
+				62B08E131E87277B002ACA0A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -177,6 +190,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62B08E131E87277B002ACA0A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62B08DDE1E86DE89002ACA0A /* Sources */ = {
@@ -309,6 +339,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 757P28B37C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TwitchTopGames/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jpcarreira.TwitchTopGamesApp;
@@ -323,6 +357,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 757P28B37C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TwitchTopGames/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jpcarreira.TwitchTopGamesApp;
@@ -350,6 +388,7 @@
 				62B08DF61E86DE89002ACA0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
