@@ -14,14 +14,12 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        // TODO: remove, remove
-        JCNetworkWrapper.get(NSURL(string: "https://api.twitch.tv/kraken/channels/twitch") as! URL, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: nil) { (json, error) in
+        TTGTwitchClient.singleton.getTopGames { (success, topGames) in
             
-            if let json = json {
+            if success {
                 
-                print(json)
+                print(topGames ?? "no games")
             }
         }
     }
-    
 }

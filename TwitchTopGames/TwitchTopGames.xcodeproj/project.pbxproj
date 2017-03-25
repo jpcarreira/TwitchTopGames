@@ -15,6 +15,8 @@
 		62B08E081E86E3FC002ACA0A /* JCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */; };
 		62B08E091E86E3FC002ACA0A /* JCNetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E071E86E3FC002ACA0A /* JCNetworkWrapper.swift */; };
 		62B08E121E872776002ACA0A /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B08E111E872776002ACA0A /* Gloss.framework */; };
+		62B08E151E87297F002ACA0A /* TTGGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E141E87297F002ACA0A /* TTGGame.swift */; };
+		62B08E181E872CCA002ACA0A /* TTGTwitchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E171E872CCA002ACA0A /* TTGTwitchClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkError.swift; path = Utils/NetworkHelper/JCNetworkError.swift; sourceTree = "<group>"; };
 		62B08E071E86E3FC002ACA0A /* JCNetworkWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkWrapper.swift; path = Utils/NetworkHelper/JCNetworkWrapper.swift; sourceTree = "<group>"; };
 		62B08E111E872776002ACA0A /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = Carthage/Build/iOS/Gloss.framework; sourceTree = "<group>"; };
+		62B08E141E87297F002ACA0A /* TTGGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGGame.swift; path = Models/TTGGame.swift; sourceTree = "<group>"; };
+		62B08E171E872CCA002ACA0A /* TTGTwitchClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGTwitchClient.swift; path = Utils/TwitchClient/TTGTwitchClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 		62B08DF71E86E289002ACA0A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				62B08E141E87297F002ACA0A /* TTGGame.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		62B08E021E86E2FF002ACA0A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				62B08E161E872CB2002ACA0A /* TwitchClient */,
 				62B08E051E86E3EC002ACA0A /* NetworkHelper */,
 			);
 			name = Utils;
@@ -120,6 +126,14 @@
 				62B08E111E872776002ACA0A /* Gloss.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62B08E161E872CB2002ACA0A /* TwitchClient */ = {
+			isa = PBXGroup;
+			children = (
+				62B08E171E872CCA002ACA0A /* TTGTwitchClient.swift */,
+			);
+			name = TwitchClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +228,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B08E081E86E3FC002ACA0A /* JCNetworkError.swift in Sources */,
+				62B08E151E87297F002ACA0A /* TTGGame.swift in Sources */,
 				62B08E091E86E3FC002ACA0A /* JCNetworkWrapper.swift in Sources */,
+				62B08E181E872CCA002ACA0A /* TTGTwitchClient.swift in Sources */,
 				62B08DFB1E86E2A6002ACA0A /* ViewController.swift in Sources */,
 				62B08DE61E86DE89002ACA0A /* AppDelegate.swift in Sources */,
 			);
