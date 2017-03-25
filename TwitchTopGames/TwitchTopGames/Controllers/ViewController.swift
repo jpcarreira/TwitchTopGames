@@ -11,15 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // TODO: remove, remove
+        JCNetworkWrapper.get(NSURL(string: "https://api.twitch.tv/kraken/channels/twitch") as! URL, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: nil) { (json, error) in
+            
+            if let json = json {
+                
+                print(json)
+            }
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
-

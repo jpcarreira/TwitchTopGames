@@ -12,6 +12,8 @@
 		62B08DFB1E86E2A6002ACA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DFA1E86E2A6002ACA0A /* ViewController.swift */; };
 		62B08E001E86E2D6002ACA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DFC1E86E2D6002ACA0A /* LaunchScreen.storyboard */; };
 		62B08E011E86E2D6002ACA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DFE1E86E2D6002ACA0A /* Main.storyboard */; };
+		62B08E081E86E3FC002ACA0A /* JCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */; };
+		62B08E091E86E3FC002ACA0A /* JCNetworkWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E071E86E3FC002ACA0A /* JCNetworkWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		62B08DFA1E86E2A6002ACA0A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		62B08DFD1E86E2D6002ACA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62B08DFF1E86E2D6002ACA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkError.swift; path = Utils/NetworkHelper/JCNetworkError.swift; sourceTree = "<group>"; };
+		62B08E071E86E3FC002ACA0A /* JCNetworkWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkWrapper.swift; path = Utils/NetworkHelper/JCNetworkWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +96,18 @@
 		62B08E021E86E2FF002ACA0A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				62B08E051E86E3EC002ACA0A /* NetworkHelper */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		62B08E051E86E3EC002ACA0A /* NetworkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				62B08E071E86E3FC002ACA0A /* JCNetworkWrapper.swift */,
+				62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */,
+			);
+			name = NetworkHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B08E081E86E3FC002ACA0A /* JCNetworkError.swift in Sources */,
+				62B08E091E86E3FC002ACA0A /* JCNetworkWrapper.swift in Sources */,
 				62B08DFB1E86E2A6002ACA0A /* ViewController.swift in Sources */,
 				62B08DE61E86DE89002ACA0A /* AppDelegate.swift in Sources */,
 			);
