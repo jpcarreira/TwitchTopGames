@@ -14,12 +14,22 @@ final class TTGTwitchClient {
     
     static let singleton = TTGTwitchClient()
     
+    var baseUrl: String {
+        
+        return "https://api.twitch.tv/kraken/"
+    }
+    
+    var clientId: String {
+        
+        return "wnkbmfji4ygkb5jw9z4bmy605wf61o"
+    }
+    
     func getTopGames(withLimit limit: Int, completionHandler handler: @escaping (_ success: Bool, _ games: [TTGGame]?) -> ()) {
         
-        var url = "https://api.twitch.tv/kraken/games/top"
+        var url = baseUrl + "games/top"
         let parameters = ["limit": String(limit)]
         
-        JCNetworkWrapper.get(&url, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: parameters) { (json, error) in
+        JCNetworkWrapper.get(&url, headers: ["Client-ID": clientId], parameters: parameters) { (json, error) in
             
             if let json = json as? Payload {
                 
@@ -39,10 +49,10 @@ final class TTGTwitchClient {
     
     func getTopStreams(forGame game:String, withLimit:Int, handler: @escaping (_ success: Bool, _ streams: [TTGStream]?) -> ()) {
         
-        var url = "https://api.twitch.tv/kraken/streams"
+        var url = baseUrl + "streams"
         let parameters = ["game": game, "limit": String(withLimit)]
         
-        JCNetworkWrapper.get(&url, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: parameters) { (json, error) in
+        JCNetworkWrapper.get(&url, headers: ["Client-ID": clientId], parameters: parameters) { (json, error) in
             
             if let json = json as? Payload {
                 
