@@ -13,7 +13,12 @@ struct TTGGame: Decodable {
     
     let name: String?
     let popularity: Int?
-    // TODO: add box and logo objects
+    let boxImageLarge: String?
+    let boxImageMedium: String?
+    let boxImageSmall: String?
+    let logoImageLarge: String?
+    let logoImageMedium: String?
+    let logoImageSmall: String?
     let viewers: Int?
     let channels: Int?
     
@@ -21,6 +26,12 @@ struct TTGGame: Decodable {
         
         name = "game.name" <~~ json
         popularity = "game.popularity" <~~ json
+        boxImageLarge = "game.box.large" <~~ json
+        boxImageMedium = "game.box.medium" <~~ json
+        boxImageSmall = "game.box.small" <~~ json
+        logoImageLarge = "game.logo.large" <~~ json
+        logoImageMedium = "game.logo.medium" <~~ json
+        logoImageSmall = "game.logo.small" <~~ json
         viewers = "viewers" <~~ json
         channels = "channels" <~~ json
     }
