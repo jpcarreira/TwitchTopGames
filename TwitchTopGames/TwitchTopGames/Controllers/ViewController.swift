@@ -19,6 +19,10 @@ class ViewController: UIViewController {
             if success {
                 
                 print(topGames ?? "no games")
+            
+            } else {
+                
+                print("some error occured")
             }
         }
         
@@ -27,6 +31,10 @@ class ViewController: UIViewController {
             if success {
                 
                 print(topStreams ?? "no streams")
+            
+            } else {
+                
+                print("some error occured")
             }
         }
     }

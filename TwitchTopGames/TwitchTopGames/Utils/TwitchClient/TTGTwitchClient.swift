@@ -43,6 +43,10 @@ final class TTGTwitchClient {
                     
                     handler(true, games)
                 }
+            
+            } else {
+                
+                handler(false, nil)
             }
         }
     }
@@ -66,6 +70,10 @@ final class TTGTwitchClient {
                     
                     handler(true, streams)
                 }
+            
+            } else {
+                
+                handler(false, nil)
             }
         }
     }
