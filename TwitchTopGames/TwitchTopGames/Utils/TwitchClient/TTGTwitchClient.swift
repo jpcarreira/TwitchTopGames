@@ -14,9 +14,12 @@ final class TTGTwitchClient {
     
     static let singleton = TTGTwitchClient()
     
-    func getTopGames(withCompletionHandler handler: @escaping (_ success: Bool, _ games: [TTGGame]?) -> ()) {
+    func getTopGames(withLimit limit: Int, completionHandler handler: @escaping (_ success: Bool, _ games: [TTGGame]?) -> ()) {
         
-        JCNetworkWrapper.get(NSURL(string: "https://api.twitch.tv/kraken/games/top?limit=5") as! URL, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: nil) { (json, error) in
+        var url = "https://api.twitch.tv/kraken/games/top"
+        let parameters = ["limit": String(limit)]
+        
+        JCNetworkWrapper.get(&url, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: parameters) { (json, error) in
             
             if let json = json as? Payload {
                 
@@ -34,9 +37,12 @@ final class TTGTwitchClient {
         }
     }
     
-    func getTopStreams(withCompletionHandler handler: @escaping (_ success: Bool, _ streams: [TTGStream]?) -> ()) {
+    func getTopStreams(forGame game:String, withLimit:Int, handler: @escaping (_ success: Bool, _ streams: [TTGStream]?) -> ()) {
         
-        JCNetworkWrapper.get(NSURL(string: "https://api.twitch.tv/kraken/streams?game=Hearthstone&limit=10") as! URL, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: nil) { (json, error) in
+        var url = "https://api.twitch.tv/kraken/streams"
+        let parameters = ["game": game, "limit": String(withLimit)]
+        
+        JCNetworkWrapper.get(&url, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: parameters) { (json, error) in
             
             if let json = json as? Payload {
                 

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        TTGTwitchClient.singleton.getTopGames { (success, topGames) in
+        TTGTwitchClient.singleton.getTopGames(withLimit: 7) { (success, topGames) in
             
             if success {
                 
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
             }
         }
         
-        TTGTwitchClient.singleton.getTopStreams { (success, topStreams) in
+        TTGTwitchClient.singleton.getTopStreams(forGame: "Alien: Isolation", withLimit: 4) { (success, topStreams) in
             
             if success {
                 

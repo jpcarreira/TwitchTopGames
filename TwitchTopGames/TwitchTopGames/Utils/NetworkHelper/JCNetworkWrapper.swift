@@ -9,18 +9,29 @@ import Foundation
 
 struct JCNetworkWrapper {
 
-    static func get(_ fromUrl: URL, headers: Dictionary<String, String>?, parameters: Dictionary<String, String>?, completionHandler: @escaping (AnyObject?, JCNetworkError?) -> Void) {
+    static func get(_ fromUrl: inout String, headers: Dictionary<String, String>?, parameters: Dictionary<String, String>?, completionHandler: @escaping (AnyObject?, JCNetworkError?) -> Void) {
 
         let sessionConfiguration = URLSessionConfiguration.default
-
+        
         if let getHeaders = headers {
 
             sessionConfiguration.httpAdditionalHeaders = getHeaders
         }
-
+        
+        if let parameters = parameters {
+            
+            var getParametersString: String = "?"
+            for (key, value) in parameters {
+                
+                getParametersString += key + "=" + value.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! + "&"
+            }
+            
+            fromUrl += getParametersString
+        }
+        
         let session = URLSession(configuration: sessionConfiguration)
         
-        let dataTask = session.dataTask(with: fromUrl, completionHandler: { (data, response, error) in
+        let dataTask = session.dataTask(with: URL(string: fromUrl)!, completionHandler: { (data, response, error) in
 
             if error == nil {
 
