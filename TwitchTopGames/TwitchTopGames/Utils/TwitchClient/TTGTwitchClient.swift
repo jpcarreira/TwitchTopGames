@@ -14,7 +14,7 @@ final class TTGTwitchClient {
     
     static let singleton = TTGTwitchClient()
     
-    func getTopGames(withCompletionHandler handler: @escaping (_ success: Bool, _ game: [TTGGame]?) -> ()) {
+    func getTopGames(withCompletionHandler handler: @escaping (_ success: Bool, _ games: [TTGGame]?) -> ()) {
         
         JCNetworkWrapper.get(NSURL(string: "https://api.twitch.tv/kraken/games/top?limit=5") as! URL, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: nil) { (json, error) in
             
@@ -29,6 +29,26 @@ final class TTGTwitchClient {
                     }
                     
                     handler(true, games)
+                }
+            }
+        }
+    }
+    
+    func getTopStreams(withCompletionHandler handler: @escaping (_ success: Bool, _ streams: [TTGStream]?) -> ()) {
+        
+        JCNetworkWrapper.get(NSURL(string: "https://api.twitch.tv/kraken/streams?game=Hearthstone&limit=10") as! URL, headers: ["Client-ID":"wnkbmfji4ygkb5jw9z4bmy605wf61o"], parameters: nil) { (json, error) in
+            
+            if let json = json as? Payload {
+                
+                if let topStreams = json["streams"] as? Array<Dictionary<String, Any>> {
+                    
+                    guard let streams = TTGStream.arrayModelFromJsonData(topStreams) else {
+                        
+                        handler(false, nil)
+                        return
+                    }
+                    
+                    handler(true, streams)
                 }
             }
         }

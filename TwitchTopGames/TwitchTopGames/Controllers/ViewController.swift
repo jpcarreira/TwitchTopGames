@@ -21,5 +21,13 @@ class ViewController: UIViewController {
                 print(topGames ?? "no games")
             }
         }
+        
+        TTGTwitchClient.singleton.getTopStreams { (success, topStreams) in
+            
+            if success {
+                
+                print(topStreams ?? "no streams")
+            }
+        }
     }
 }
