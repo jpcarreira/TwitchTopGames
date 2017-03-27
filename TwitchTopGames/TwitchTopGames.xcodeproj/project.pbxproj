@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6234A0561E89C0BC00F2E9B3 /* TTGGamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234A0551E89C0BC00F2E9B3 /* TTGGamesDataSource.swift */; };
 		62B08DE61E86DE89002ACA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DE51E86DE89002ACA0A /* AppDelegate.swift */; };
 		62B08DED1E86DE89002ACA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DEC1E86DE89002ACA0A /* Assets.xcassets */; };
 		62B08DFB1E86E2A6002ACA0A /* TTGGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DFA1E86E2A6002ACA0A /* TTGGamesViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6234A0551E89C0BC00F2E9B3 /* TTGGamesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGGamesDataSource.swift; path = Models/TTGGamesDataSource.swift; sourceTree = "<group>"; };
 		62B08DE21E86DE89002ACA0A /* TwitchTopGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchTopGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B08DE51E86DE89002ACA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62B08DEC1E86DE89002ACA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				62B08E141E87297F002ACA0A /* TTGGame.swift */,
 				62B08E191E881158002ACA0A /* TTGStream.swift */,
+				6234A0551E89C0BC00F2E9B3 /* TTGGamesDataSource.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				62B08E081E86E3FC002ACA0A /* JCNetworkError.swift in Sources */,
 				62B08E151E87297F002ACA0A /* TTGGame.swift in Sources */,
+				6234A0561E89C0BC00F2E9B3 /* TTGGamesDataSource.swift in Sources */,
 				62B08E091E86E3FC002ACA0A /* JCNetworkWrapper.swift in Sources */,
 				62B08E1A1E881158002ACA0A /* TTGStream.swift in Sources */,
 				62B08E181E872CCA002ACA0A /* TTGTwitchClient.swift in Sources */,

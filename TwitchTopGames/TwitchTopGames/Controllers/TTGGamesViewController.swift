@@ -9,61 +9,43 @@
 import UIKit
 
 class TTGGamesViewController: UICollectionViewController {
-
+    
+    fileprivate var gamesDataSource = TTGGamesDataSource()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
+        gamesDataSource.delegate = self
+    
         // small tweak in collection view layout
         let width = collectionView!.frame.width / 2
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width * 1.5)
-        
-        TTGTwitchClient.singleton.getTopGames(withLimit: 7) { (success, topGames) in
-            
-            if success {
-                
-                print(topGames ?? "no games")
-            
-            } else {
-                
-                print("some error occured")
-            }
-        }
-        
-        TTGTwitchClient.singleton.getTopStreams(forGame: "Alien: Isolation", withLimit: 4) { (success, topStreams) in
-            
-            if success {
-                
-                print(topStreams ?? "no streams")
-            
-            } else {
-                
-                print("some error occured")
-            }
-        }
     }
 }
 
 // MARK - UICollectionViewDataSource
 extension TTGGamesViewController {
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        return 1
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        // TODO:
-        return 5
+        return gamesDataSource.getNumberOfGames()
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let gameCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCell", for: indexPath)
-        
-        return gameCell
+        return collectionView.dequeueReusableCell(withReuseIdentifier: "GameCell", for: indexPath)
     }
 }
 
+extension TTGGamesViewController: TTGGameDataSourceDelegate {
+    
+    func didFinishRequest() {
+        
+        DispatchQueue.main.async {
+            
+            self.collectionView?.reloadData()
+        }
+    }
+}
