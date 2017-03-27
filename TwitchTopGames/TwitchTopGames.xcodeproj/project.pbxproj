@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		62B08DE61E86DE89002ACA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DE51E86DE89002ACA0A /* AppDelegate.swift */; };
 		62B08DED1E86DE89002ACA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DEC1E86DE89002ACA0A /* Assets.xcassets */; };
-		62B08DFB1E86E2A6002ACA0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DFA1E86E2A6002ACA0A /* ViewController.swift */; };
+		62B08DFB1E86E2A6002ACA0A /* TTGGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DFA1E86E2A6002ACA0A /* TTGGamesViewController.swift */; };
 		62B08E001E86E2D6002ACA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DFC1E86E2D6002ACA0A /* LaunchScreen.storyboard */; };
 		62B08E011E86E2D6002ACA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DFE1E86E2D6002ACA0A /* Main.storyboard */; };
 		62B08E081E86E3FC002ACA0A /* JCNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */; };
@@ -25,7 +25,7 @@
 		62B08DE51E86DE89002ACA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62B08DEC1E86DE89002ACA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62B08DF11E86DE89002ACA0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62B08DFA1E86E2A6002ACA0A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
+		62B08DFA1E86E2A6002ACA0A /* TTGGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGGamesViewController.swift; path = Controllers/TTGGamesViewController.swift; sourceTree = "<group>"; };
 		62B08DFD1E86E2D6002ACA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62B08DFF1E86E2D6002ACA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62B08E061E86E3FC002ACA0A /* JCNetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JCNetworkError.swift; path = Utils/NetworkHelper/JCNetworkError.swift; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 		62B08DF91E86E293002ACA0A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				62B08DFA1E86E2A6002ACA0A /* ViewController.swift */,
+				62B08DFA1E86E2A6002ACA0A /* TTGGamesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 				62B08E091E86E3FC002ACA0A /* JCNetworkWrapper.swift in Sources */,
 				62B08E1A1E881158002ACA0A /* TTGStream.swift in Sources */,
 				62B08E181E872CCA002ACA0A /* TTGTwitchClient.swift in Sources */,
-				62B08DFB1E86E2A6002ACA0A /* ViewController.swift in Sources */,
+				62B08DFB1E86E2A6002ACA0A /* TTGGamesViewController.swift in Sources */,
 				62B08DE61E86DE89002ACA0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
