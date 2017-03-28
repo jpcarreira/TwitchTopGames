@@ -51,6 +51,7 @@ extension TTGStreamCollectionViewController {
     }
 }
 
+// MARK - TTGGameDataSourceDelegate
 extension TTGStreamCollectionViewController: TTGStreamDataSourceDelegate {
     
     func didFinishRequest() {

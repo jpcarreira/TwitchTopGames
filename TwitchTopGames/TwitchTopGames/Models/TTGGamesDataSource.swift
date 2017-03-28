@@ -33,17 +33,17 @@ final class TTGGamesDataSource {
         fetchGameData()
     }
     
-    public func getNumberOfGames() -> Int {
+    func getNumberOfGames() -> Int {
         
         return topGames.count
     }
     
-    public func getGame(atIndex index:Int) -> TTGGame {
+    func getGame(atIndex index:Int) -> TTGGame {
         
         return topGames[index]
     }
     
-    public func getGameTitle(atIndex index:Int) -> String? {
+    func getGameTitle(atIndex index:Int) -> String? {
         
         return topGames[index].name
     }
