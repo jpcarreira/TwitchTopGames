@@ -31,6 +31,23 @@ class TTGStreamCollectionViewController: UICollectionViewController {
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: height)
     }
+
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == "WebViewSegue" {
+            
+            let indexPath = collectionView?.indexPath(for: sender as! UICollectionViewCell)
+            
+            if let indexPath = indexPath {
+                
+                let streamUrl = streamDataSource.getChannelUrl(atIndex: indexPath.row)
+                let webViewController = segue.destination as! TTGStreamWebViewController
+                webViewController.url = streamUrl
+            }
+        }
+    }
 }
 
 // MARK: UICollectionViewDataSource
@@ -44,7 +61,7 @@ extension TTGStreamCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StreamCell", for: indexPath) as! TTGStreamCollectionViewCell
-        let stream = streamDataSource.getStreamAtIndex(atIndex: indexPath.row)
+        let stream = streamDataSource.getStream(atIndex: indexPath.row)
         cell.stream = stream
         
         return cell

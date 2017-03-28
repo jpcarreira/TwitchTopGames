@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -176,6 +177,7 @@
                                     <outlet property="streamImageView" destination="MIC-eS-It6" id="Gjc-Qu-ogX"/>
                                     <outlet property="streamName" destination="LVH-KG-hwq" id="HOW-b6-yyO"/>
                                     <outlet property="streamTotalViewers" destination="lxh-tz-F9m" id="goA-PY-07O"/>
+                                    <segue destination="Hua-QA-Ss5" kind="show" identifier="WebViewSegue" id="QaL-ib-mXa"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -188,6 +190,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tzi-uN-3ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="-18.440779610194905"/>
+        </scene>
+        <!--Stream Web View Controller-->
+        <scene sceneID="yWp-Tj-YmD">
+            <objects>
+                <viewController id="Hua-QA-Ss5" customClass="TTGStreamWebViewController" customModule="TwitchTopGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pu7-Es-irI"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Uk-TW-T4C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cfz-ri-2QU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCW-ga-0Bl">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Uk-TW-T4C" firstAttribute="top" secondItem="YCW-ga-0Bl" secondAttribute="bottom" id="A04-No-4ub"/>
+                            <constraint firstItem="YCW-ga-0Bl" firstAttribute="leading" secondItem="Cfz-ri-2QU" secondAttribute="leadingMargin" id="OQT-ex-GsW"/>
+                            <constraint firstItem="YCW-ga-0Bl" firstAttribute="top" secondItem="pu7-Es-irI" secondAttribute="bottom" id="R8z-EN-51S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YCW-ga-0Bl" secondAttribute="trailing" id="wZe-AX-YGE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="YCW-ga-0Bl" id="OTD-It-Y4v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DN4-Hz-0Ct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095" y="-18"/>
         </scene>
     </scenes>
     <resources>

@@ -44,8 +44,13 @@ final class TTGStreamDataSource {
         return topStreams.count
     }
     
-    func getStreamAtIndex(atIndex index: Int) -> TTGStream {
+    func getStream(atIndex index: Int) -> TTGStream {
         
         return topStreams[index]
+    }
+    
+    func getChannelUrl(atIndex index: Int) -> URL {
+        
+        return URL(string: topStreams[index].channelUrl!)!
     }
 }
