@@ -139,6 +139,10 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder2" translatesAutoresizingMaskIntoConstraints="NO" id="MIC-eS-It6">
                                                     <rect key="frame" x="0.0" y="0.0" width="344" height="132"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gKn-pK-Spy">
+                                                    <rect key="frame" x="0.0" y="85" width="344" height="47"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the stream can be this long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-KG-hwq">
                                                     <rect key="frame" x="6" y="85" width="332" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -156,12 +160,16 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="LVH-KG-hwq" secondAttribute="trailing" constant="6" id="1v2-fM-fk1"/>
                                                 <constraint firstItem="lxh-tz-F9m" firstAttribute="top" secondItem="LVH-KG-hwq" secondAttribute="bottom" constant="6" id="4tf-Tf-Fl4"/>
+                                                <constraint firstAttribute="bottom" secondItem="gKn-pK-Spy" secondAttribute="bottom" id="9AL-XJ-aWB"/>
                                                 <constraint firstItem="MIC-eS-It6" firstAttribute="top" secondItem="gM5-WA-QSd" secondAttribute="top" id="CNS-nl-iBa"/>
                                                 <constraint firstItem="LVH-KG-hwq" firstAttribute="leading" secondItem="gM5-WA-QSd" secondAttribute="leading" constant="6" id="DdL-pd-K3J"/>
                                                 <constraint firstAttribute="bottom" secondItem="lxh-tz-F9m" secondAttribute="bottom" constant="6" id="KDd-bs-xly"/>
                                                 <constraint firstAttribute="bottom" secondItem="MIC-eS-It6" secondAttribute="bottom" id="Vs3-Zj-Qn6"/>
+                                                <constraint firstItem="LVH-KG-hwq" firstAttribute="top" secondItem="gKn-pK-Spy" secondAttribute="top" id="ZYR-c4-Een"/>
                                                 <constraint firstAttribute="trailing" secondItem="MIC-eS-It6" secondAttribute="trailing" id="d5X-Tg-a7f"/>
+                                                <constraint firstAttribute="trailing" secondItem="gKn-pK-Spy" secondAttribute="trailing" id="daP-Q7-DBy"/>
                                                 <constraint firstItem="lxh-tz-F9m" firstAttribute="leading" secondItem="gM5-WA-QSd" secondAttribute="leading" constant="6" id="nd7-5X-EtD"/>
+                                                <constraint firstItem="gKn-pK-Spy" firstAttribute="leading" secondItem="gM5-WA-QSd" secondAttribute="leading" id="pwB-qb-VhR"/>
                                                 <constraint firstItem="MIC-eS-It6" firstAttribute="leading" secondItem="gM5-WA-QSd" secondAttribute="leading" id="sEO-Uj-G56"/>
                                             </constraints>
                                         </view>
