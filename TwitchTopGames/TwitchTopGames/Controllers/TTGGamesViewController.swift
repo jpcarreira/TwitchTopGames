@@ -37,23 +37,7 @@ extension TTGGamesViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let gameCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GameCell", for: indexPath) as! TTGGameCollectionViewCell
-    
-        let modelObject = gamesDataSource.getGame(atIndex: indexPath.row)
-        
-        if let name = modelObject.name {
-            
-            gameCell.gameTitle.text = name
-        }
-        
-        if let imageUrl = modelObject.boxImageLargeUrl {
-            
-            gameCell.gameImageView.kf.setImage(with: URL(string: imageUrl))
-        }
-        
-        if let viewerCount = modelObject.viewers {
-            
-            gameCell.gameTotalViewers.text = String(viewerCount) + " viewers"
-        }
+        gameCell.game = gamesDataSource.getGame(atIndex: indexPath.row)
         
         return gameCell
     }
