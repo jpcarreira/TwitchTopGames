@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6234A0561E89C0BC00F2E9B3 /* TTGGamesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234A0551E89C0BC00F2E9B3 /* TTGGamesDataSource.swift */; };
 		6234A0581E8A4AB700F2E9B3 /* TTGGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234A0571E8A4AB700F2E9B3 /* TTGGameCollectionViewCell.swift */; };
+		6234A0641E8AFEB200F2E9B3 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6234A0631E8AFEB200F2E9B3 /* Kingfisher.framework */; };
 		62B08DE61E86DE89002ACA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DE51E86DE89002ACA0A /* AppDelegate.swift */; };
 		62B08DED1E86DE89002ACA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DEC1E86DE89002ACA0A /* Assets.xcassets */; };
 		62B08DFB1E86E2A6002ACA0A /* TTGGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DFA1E86E2A6002ACA0A /* TTGGamesViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		6234A0551E89C0BC00F2E9B3 /* TTGGamesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGGamesDataSource.swift; path = Models/TTGGamesDataSource.swift; sourceTree = "<group>"; };
 		6234A0571E8A4AB700F2E9B3 /* TTGGameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGGameCollectionViewCell.swift; path = Views/TTGGameCollectionViewCell.swift; sourceTree = "<group>"; };
+		6234A0631E8AFEB200F2E9B3 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		62B08DE21E86DE89002ACA0A /* TwitchTopGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchTopGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B08DE51E86DE89002ACA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62B08DEC1E86DE89002ACA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6234A0641E8AFEB200F2E9B3 /* Kingfisher.framework in Frameworks */,
 				62B08E121E872776002ACA0A /* Gloss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -132,6 +135,7 @@
 		62B08E101E872776002ACA0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6234A0631E8AFEB200F2E9B3 /* Kingfisher.framework */,
 				62B08E111E872776002ACA0A /* Gloss.framework */,
 			);
 			name = Frameworks;
@@ -222,6 +226,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Gloss.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			outputPaths = (
 			);

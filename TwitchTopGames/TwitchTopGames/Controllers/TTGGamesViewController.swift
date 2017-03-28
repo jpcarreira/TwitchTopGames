@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TTGGamesViewController.swift
 //  TwitchTopGames
 //
 //  Created by João Carreira on 25/03/2017.
@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TTGGamesViewController: UICollectionViewController {
     
@@ -44,14 +45,14 @@ extension TTGGamesViewController {
             gameCell.gameTitle.text = name
         }
         
-//        if let imageUrl = modelObject.boxImageLargeUrl {
-//            
-//          
-//        }
+        if let imageUrl = modelObject.boxImageLargeUrl {
+            
+            gameCell.gameImageView.kf.setImage(with: URL(string: imageUrl))
+        }
         
         if let viewerCount = modelObject.viewers {
             
-            gameCell.gameTotalViewers.text = String(viewerCount)
+            gameCell.gameTotalViewers.text = String(viewerCount) + " viewers"
         }
         
         return gameCell
