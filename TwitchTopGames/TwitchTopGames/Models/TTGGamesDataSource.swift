@@ -20,7 +20,7 @@ class TTGGamesDataSource {
         didSet {
             
             if topGames.count > 0 {
-                
+        
                 delegate?.didFinishRequest()
             }
         }
@@ -30,7 +30,6 @@ class TTGGamesDataSource {
     
     init() {
         
-        
         fetchGameData()
     }
     
@@ -39,9 +38,14 @@ class TTGGamesDataSource {
         return topGames.count
     }
     
+    public func getGame(atIndex index:Int) -> TTGGame {
+        
+        return topGames[index]
+    }
+    
     private func fetchGameData() {
         
-        TTGTwitchClient.singleton.getTopGames(withLimit: 8) { (success, topGames) in
+        TTGTwitchClient.singleton.getTopGames(withLimit: 5) { (success, topGames) in
         
             if success, let topGames = topGames {
         
@@ -49,17 +53,15 @@ class TTGGamesDataSource {
             }
         }
     }
-}
-
-//
-//TTGTwitchClient.singleton.getTopStreams(forGame: "Alien: Isolation", withLimit: 4) { (success, topStreams) in
-//    
-//    if success {
+    
+//    private func fetchStreamData(forGame game:String) {
 //        
-//        print(topStreams ?? "no streams")
+//        TTGTwitchClient.singleton.getTopStreams(forGame: game, withLimit: 10) { (success, topStreams) in
 //        
-//    } else {
+//            if success, let topStreams = topStreams {
 //        
-//        print("some error occured")
+//                self.topStreams.insert(topStreams)
+//            }
+//        }
 //    }
-//}
+}
