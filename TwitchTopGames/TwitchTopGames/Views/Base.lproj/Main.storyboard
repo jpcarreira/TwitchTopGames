@@ -110,28 +110,73 @@
             </objects>
             <point key="canvasLocation" x="232.80000000000001" y="-18.440779610194905"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Stream Collection View Controller-->
         <scene sceneID="pO2-cX-lqq">
             <objects>
-                <collectionViewController id="6NY-EO-X7e" sceneMemberID="viewController">
+                <collectionViewController id="6NY-EO-X7e" customClass="TTGStreamCollectionViewController" customModule="TwitchTopGames" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="tgb-hO-O77">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jdz-N5-YAs">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="348" height="136"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TPY-fh-emV">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StreamCell" id="TPY-fh-emV" customClass="TTGStreamCollectionViewCell" customModule="TwitchTopGames" customModuleProvider="target">
+                                <rect key="frame" x="14" y="0.0" width="348" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="136"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gM5-WA-QSd">
+                                            <rect key="frame" x="2" y="2" width="344" height="132"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MIC-eS-It6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="344" height="132"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the stream can be this long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVH-KG-hwq">
+                                                    <rect key="frame" x="6" y="85" width="332" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999 viewers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxh-tz-F9m">
+                                                    <rect key="frame" x="6" y="111.5" width="85" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.50196078430000002" green="0.090196078430000007" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="LVH-KG-hwq" secondAttribute="trailing" constant="6" id="1v2-fM-fk1"/>
+                                                <constraint firstItem="lxh-tz-F9m" firstAttribute="top" secondItem="LVH-KG-hwq" secondAttribute="bottom" constant="6" id="4tf-Tf-Fl4"/>
+                                                <constraint firstItem="MIC-eS-It6" firstAttribute="top" secondItem="gM5-WA-QSd" secondAttribute="top" id="CNS-nl-iBa"/>
+                                                <constraint firstItem="LVH-KG-hwq" firstAttribute="leading" secondItem="gM5-WA-QSd" secondAttribute="leading" constant="6" id="DdL-pd-K3J"/>
+                                                <constraint firstAttribute="bottom" secondItem="lxh-tz-F9m" secondAttribute="bottom" constant="6" id="KDd-bs-xly"/>
+                                                <constraint firstAttribute="bottom" secondItem="MIC-eS-It6" secondAttribute="bottom" id="Vs3-Zj-Qn6"/>
+                                                <constraint firstAttribute="trailing" secondItem="MIC-eS-It6" secondAttribute="trailing" id="d5X-Tg-a7f"/>
+                                                <constraint firstItem="lxh-tz-F9m" firstAttribute="leading" secondItem="gM5-WA-QSd" secondAttribute="leading" constant="6" id="nd7-5X-EtD"/>
+                                                <constraint firstItem="MIC-eS-It6" firstAttribute="leading" secondItem="gM5-WA-QSd" secondAttribute="leading" id="sEO-Uj-G56"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gM5-WA-QSd" secondAttribute="bottom" constant="2" id="FfN-V2-WR6"/>
+                                    <constraint firstItem="gM5-WA-QSd" firstAttribute="leading" secondItem="TPY-fh-emV" secondAttribute="leading" constant="2" id="LPd-gR-DhM"/>
+                                    <constraint firstItem="gM5-WA-QSd" firstAttribute="top" secondItem="TPY-fh-emV" secondAttribute="top" constant="2" id="XhN-Gx-Jba"/>
+                                    <constraint firstAttribute="trailing" secondItem="gM5-WA-QSd" secondAttribute="trailing" constant="2" id="nMq-bh-o9v"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="streamImageView" destination="MIC-eS-It6" id="Gjc-Qu-ogX"/>
+                                    <outlet property="streamName" destination="LVH-KG-hwq" id="HOW-b6-yyO"/>
+                                    <outlet property="streamTotalViewers" destination="lxh-tz-F9m" id="goA-PY-07O"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -142,7 +187,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tzi-uN-3ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="-18"/>
+            <point key="canvasLocation" x="1189.5999999999999" y="-18.440779610194905"/>
         </scene>
     </scenes>
     <resources>

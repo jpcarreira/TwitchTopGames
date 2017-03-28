@@ -33,10 +33,9 @@ class TTGGamesViewController: UICollectionViewController {
             
             if let indexPath = indexPath {
                 
-                let title = gamesDataSource.getGameTitle(atIndex: indexPath.row)
-                print(title!)
-             
-                // TODO: pass the game title to the StreamVC
+                let gameTitle = gamesDataSource.getGameTitle(atIndex: indexPath.row)
+                let streamCollectionViewController = segue.destination as! TTGStreamCollectionViewController
+                streamCollectionViewController.gameName = gameTitle
             }
         }
     }
