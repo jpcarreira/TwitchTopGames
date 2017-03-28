@@ -13,7 +13,7 @@ protocol TTGGameDataSourceDelegate: class {
     func didFinishRequest()
 }
 
-class TTGGamesDataSource {
+final class TTGGamesDataSource {
     
     var topGames: [TTGGame] = [] {
         
@@ -58,15 +58,4 @@ class TTGGamesDataSource {
             }
         }
     }
-    
-//    private func fetchStreamData(forGame game:String) {
-//        
-//        TTGTwitchClient.singleton.getTopStreams(forGame: game, withLimit: 10) { (success, topStreams) in
-//        
-//            if success, let topStreams = topStreams {
-//        
-//                self.topStreams.insert(topStreams)
-//            }
-//        }
-//    }
 }

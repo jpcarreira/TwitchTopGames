@@ -24,7 +24,7 @@ class TTGStreamCollectionViewCell: UICollectionViewCell {
                 
                 streamImageView.kf.setImage(with: URL(string: stream.previewImageLargeUrl!))
                 streamName.text = stream.channelName
-                streamTotalViewers.text = String(describing: stream.viewers) + " viewers"
+                streamTotalViewers.text = String(describing: stream.viewers!) + " viewers"
             }
         }
     }
