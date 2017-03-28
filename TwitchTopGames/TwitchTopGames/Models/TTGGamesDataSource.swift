@@ -43,6 +43,11 @@ class TTGGamesDataSource {
         return topGames[index]
     }
     
+    public func getGameTitle(atIndex index:Int) -> String? {
+        
+        return topGames[index].name
+    }
+    
     private func fetchGameData() {
         
         TTGTwitchClient.singleton.getTopGames(withLimit: 5) { (success, topGames) in

@@ -24,6 +24,22 @@ class TTGGamesViewController: UICollectionViewController {
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height: width * 1.5)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "StreamSegue" {
+            
+            let indexPath = collectionView?.indexPath(for: sender as! UICollectionViewCell)
+            
+            if let indexPath = indexPath {
+                
+                let title = gamesDataSource.getGameTitle(atIndex: indexPath.row)
+                print(title!)
+             
+                // TODO: pass the game title to the StreamVC
+            }
+        }
+    }
 }
 
 // MARK - UICollectionViewDataSource

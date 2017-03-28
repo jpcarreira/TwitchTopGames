@@ -13,7 +13,7 @@
         <scene sceneID="end-au-rfu">
             <objects>
                 <navigationController id="Adr-zj-wsY" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tbQ-rK-Uzy">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tbQ-rK-Uzy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.50196078430000002" green="0.090196078430000007" blue="0.99215686270000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -33,7 +33,7 @@
         <scene sceneID="BCD-El-256">
             <objects>
                 <collectionViewController id="bsH-6k-X4f" customClass="TTGGamesViewController" customModule="TwitchTopGames" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Bfk-3H-Ss7">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bfk-3H-Ss7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -95,6 +95,7 @@
                                     <outlet property="gameImageView" destination="dSK-kT-19Y" id="4Rf-Dx-D3G"/>
                                     <outlet property="gameTitle" destination="XmJ-VX-Rp6" id="PN3-Mx-Yqt"/>
                                     <outlet property="gameTotalViewers" destination="Rgy-cf-h9C" id="580-FR-XZJ"/>
+                                    <segue destination="6NY-EO-X7e" kind="show" identifier="StreamSegue" id="fny-Ry-gGW"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -108,6 +109,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6IW-FI-vda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="232.80000000000001" y="-18.440779610194905"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="pO2-cX-lqq">
+            <objects>
+                <collectionViewController id="6NY-EO-X7e" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="tgb-hO-O77">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jdz-N5-YAs">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TPY-fh-emV">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6NY-EO-X7e" id="WbZ-zm-WSP"/>
+                            <outlet property="delegate" destination="6NY-EO-X7e" id="67U-Vi-dIQ"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzi-uN-3ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1191" y="-18"/>
         </scene>
     </scenes>
     <resources>
