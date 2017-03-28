@@ -22,6 +22,7 @@ class TTGStreamCollectionViewController: UICollectionViewController {
         
         if let gameName = gameName {
             
+            self.title = gameName
             streamDataSource.fetchStreamData(forGame: gameName)
         }
         

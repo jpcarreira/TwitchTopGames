@@ -14,8 +14,9 @@
 		6234A0681E8B0F9100F2E9B3 /* TTGStreamCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234A0671E8B0F9100F2E9B3 /* TTGStreamCollectionViewController.swift */; };
 		6234A06A1E8B135700F2E9B3 /* TTGStreamDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234A0691E8B135700F2E9B3 /* TTGStreamDataSource.swift */; };
 		6234A06C1E8B1C3400F2E9B3 /* TTGStreamWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234A06B1E8B1C3400F2E9B3 /* TTGStreamWebViewController.swift */; };
+		6234A0701E8B23B300F2E9B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6234A06E1E8B23B300F2E9B3 /* Assets.xcassets */; };
+		6234A0711E8B23B300F2E9B3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6234A06F1E8B23B300F2E9B3 /* Info.plist */; };
 		62B08DE61E86DE89002ACA0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DE51E86DE89002ACA0A /* AppDelegate.swift */; };
-		62B08DED1E86DE89002ACA0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DEC1E86DE89002ACA0A /* Assets.xcassets */; };
 		62B08DFB1E86E2A6002ACA0A /* TTGGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B08DFA1E86E2A6002ACA0A /* TTGGamesViewController.swift */; };
 		62B08E001E86E2D6002ACA0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DFC1E86E2D6002ACA0A /* LaunchScreen.storyboard */; };
 		62B08E011E86E2D6002ACA0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B08DFE1E86E2D6002ACA0A /* Main.storyboard */; };
@@ -35,10 +36,10 @@
 		6234A0671E8B0F9100F2E9B3 /* TTGStreamCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGStreamCollectionViewController.swift; path = Controllers/TTGStreamCollectionViewController.swift; sourceTree = "<group>"; };
 		6234A0691E8B135700F2E9B3 /* TTGStreamDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGStreamDataSource.swift; path = Models/TTGStreamDataSource.swift; sourceTree = "<group>"; };
 		6234A06B1E8B1C3400F2E9B3 /* TTGStreamWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGStreamWebViewController.swift; path = Controllers/TTGStreamWebViewController.swift; sourceTree = "<group>"; };
+		6234A06E1E8B23B300F2E9B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		6234A06F1E8B23B300F2E9B3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		62B08DE21E86DE89002ACA0A /* TwitchTopGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchTopGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B08DE51E86DE89002ACA0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		62B08DEC1E86DE89002ACA0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		62B08DF11E86DE89002ACA0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62B08DFA1E86E2A6002ACA0A /* TTGGamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TTGGamesViewController.swift; path = Controllers/TTGGamesViewController.swift; sourceTree = "<group>"; };
 		62B08DFD1E86E2D6002ACA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62B08DFF1E86E2D6002ACA0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Views/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +64,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6234A06D1E8B234700F2E9B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6234A06E1E8B23B300F2E9B3 /* Assets.xcassets */,
+				6234A06F1E8B23B300F2E9B3 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		62B08DD91E86DE89002ACA0A = {
 			isa = PBXGroup;
 			children = (
@@ -87,9 +97,8 @@
 				62B08DF81E86E28F002ACA0A /* Views */,
 				62B08DF91E86E293002ACA0A /* Controllers */,
 				62B08E021E86E2FF002ACA0A /* Utils */,
+				6234A06D1E8B234700F2E9B3 /* Resources */,
 				62B08DE51E86DE89002ACA0A /* AppDelegate.swift */,
-				62B08DEC1E86DE89002ACA0A /* Assets.xcassets */,
-				62B08DF11E86DE89002ACA0A /* Info.plist */,
 			);
 			path = TwitchTopGames;
 			sourceTree = "<group>";
@@ -222,8 +231,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6234A0711E8B23B300F2E9B3 /* Info.plist in Resources */,
 				62B08E011E86E2D6002ACA0A /* Main.storyboard in Resources */,
-				62B08DED1E86DE89002ACA0A /* Assets.xcassets in Resources */,
+				6234A0701E8B23B300F2E9B3 /* Assets.xcassets in Resources */,
 				62B08E001E86E2D6002ACA0A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +402,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TwitchTopGames/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TwitchTopGames/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jpcarreira.TwitchTopGamesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -410,7 +420,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = TwitchTopGames/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TwitchTopGames/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jpcarreira.TwitchTopGamesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
