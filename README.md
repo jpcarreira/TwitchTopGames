@@ -6,7 +6,7 @@ An iOS app showing Twitch top 5 games and respective most popular streams. This 
 
 ## Requirements
 This project was developed in **XCode 8.2.1** using **Swift 3.0.2**.
-This app has dependencies managed by [carthage](https://github.com/Carthage/Carthage) so if you should run the following command after cloning the project:
+This app has dependencies managed by [carthage](https://github.com/Carthage/Carthage) so you should run the following command after cloning the project:
 ```carthage update --platform iOS```
 
 ## Improvements
@@ -20,7 +20,7 @@ This app has dependencies managed by [carthage](https://github.com/Carthage/Cart
 ## Steps taken during implementation - Logged time (in hours)
 * analysis of requirements - 0.5h
 * project setup (setting up XCode, carthage, importing JCNetworkWrapper) - 1h
-* implementing TTGTwitchClient, modeling the server response - 2h
+* implementing TTGTwitchClient, modeling the server response - 3h
 * implementing TTGGamesViewController and respective view, decorating the view with model data - 2h
 * implementing TTGStreamCollectionViewController and respective view, decorating the view with model data - 1h
 * implementing TTGStreamWebViewController - 0.5h
